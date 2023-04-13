@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./src/css/form.css" </head> <body class="bg-slate-200">
+
+    <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+        <form class="flex flex-col justify-center items-center h-96 w-96 m-auto">
+            <fieldset class=" border-black border-4 mt-60">
+                <legend><b>Formulário de Freelancer</b></legend>
+                <div class="inline-block">
+                    <label class="ml-3">Nome<span class="text-indigo-600">*</span></label>
+                    <input type="text" placeholder="nome" class="border-2 border-black m-12 p-1" required> <br>
+                </div>
+
+                <div>
+                    <label class="ml-3">Sobrenome<span class="text-indigo-600">*</span></label>
+                    <input placeholder="Sobrenome" class="border-2 border-black m-3" required> <br>
+                </div>
+
+                <div>
+                    <label class="ml-3">Telefone<span class="text-indigo-600">*</span></label>
+                    <input type="tel" id="telefone" placeholder="(99)99999-9999" class="border-2 border-black m-8 "
+                        required>
+                </div>
+
+                <div>
+                    <label class="ml-3">Email<span class="text-indigo-600">*</span></label>
+                    <input type="email" id="email" placeholder="Insira seu e-mail" class="border-2 border-black m-12"
+                        required>
+                </div>
+
+                <div class="inline-block">
+                    <label class="ml-3 relative top-6">Mensagem<span class="text-indigo-600">*</span></label>
+                    <textarea placeholder="Informe o que deseja" class="m-4 absolute border-2 border-black w-96"
+                        required></textarea><br><br><br><br>
+                </div>
+                <div class="flex gap-4">
+                    <label class="ml-3">Lingua</label>
+                    <select class="border-2 border-black ml-10">
+                        <option selected>Português (BR)</option>
+                        <option value="US">Inglês (US)</option>
+                        <option value="FR">Francês (FR)</option>
+                        <option value="FR">Espanhol (ES)</option>
+                    </select>
+                    <br>
+                </div>
+                <br>
+                <div class="inline-block">
+                    <label class="ml-3">Protótipo<br>(Requisitos)</label>
+                    <input class="ml-10" type="file" name="myfile" accept=".pdf, .docx, .png, .jpeg, .docx">
+                <br> <br>
+                </div>
+                <div class="gap-4 flex justify-between">
+                    <label class="ml-3">Linguagens que você prefere?</label>
+                    <select multiple class="w-40">
+                        <option value="volvo">Python</option>
+                        <option value="saab">Java</option>
+                        <option value="opel">C</option>
+                        <option value="audi">C#</option>
+                        <option value="audi">Ruby</option>
+                    </select>
+                    <label>(Para fazer várias escolhas, mantenha a tecla CTRL pressionada)</label>
+                </div>
+                <div class="gap-4 flex justify-center items-center m-4">
+                    <label class="flex content-center">Banco de dados</label>
+                    <div class="flex flex-row">
+                        <label>MySQL</label>
+                        <input type="radio" name="db">
+                    </div>
+                    |
+                    <div class="flex flex-row">
+                        <label>PostgreSQL</label>
+                        <input type="radio" name="db">
+                    </div>
+                    |
+                    <div class="flex flex-row">
+                        <label>MongoDB</label>
+                        <input type="radio" name="db">
+                    </div>
+                    |
+                    <div class="flex flex-row">
+                        <label>N/a</label>
+                        <input type="radio" name="db">
+                    </div>
+                    |
+                    <div class="flex flex-row">
+                        <label>Outra</label>
+                        <input type="radio" name="db">
+                    </div>
+                </div>
+                <div class="gap-4 flex justify-between items-center m-4">
+                    <div>
+                        <label>Turno para reuniões <span class="text-indigo-600">*</span></label>
+                        <input type="checkbox">
+                        <label>Manhã</label>
+                        |
+                        <input type="checkbox">
+                        <label>Tarde</label>
+                        |
+                        <input type="checkbox">
+                        <label>Noite</label>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <label class="ml-3">Horário sugerido</label>
+                    <input class="m-12" type="time">
+                </div>
+                <div class="inline-block">
+                    <label class="ml-3">Data Prevista Entrega</label>
+                    <input class="m-4" type="date">
+                </div>
+<br>
+                <div class="inline-block">
+                    <button id="enviar" class="bg-gray-300 m-4">Enviar</button>
+                    <input type="reset" class="bg-gray-300"></input>
+                    <h5 class="ml-3"><span class="text-indigo-600">*</span> campos obrigatórios</h5>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="./src/js/forms.js"></script>
+    </body>
+
+</html>
