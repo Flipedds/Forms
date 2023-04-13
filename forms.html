@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./src/css/form.css" </head> <body class="bg-slate-200">
 
     <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-        <form class="flex flex-col justify-center items-center h-96 w-96 m-auto">
+        <form id="formulario" class="flex flex-col justify-center items-center h-96 w-96 m-auto">
             <fieldset class=" border-black border-4 mt-60">
                 <legend><b>Formulário de Freelancer</b></legend>
                 <div class="inline-block">
@@ -95,14 +95,14 @@
                 <div class="gap-4 flex justify-between items-center m-4">
                     <div>
                         <label>Turno para reuniões <span class="text-indigo-600">*</span></label>
-                        <input type="checkbox">
-                        <label>Manhã</label>
+                        <input id="manha" type="checkbox" name="hr">
+                        <label for="manha">Manhã</label>
                         |
-                        <input type="checkbox">
-                        <label>Tarde</label>
+                        <input id="tarde" type="checkbox" name="hr">
+                        <label for="tarde">Tarde</label>
                         |
-                        <input type="checkbox">
-                        <label>Noite</label>
+                        <input id="noite" type="checkbox" name="hr">
+                        <label for="noite">Noite</label>
                     </div>
                 </div>
                 <div class="inline-block">
@@ -110,8 +110,8 @@
                     <input class="m-12" type="time">
                 </div>
                 <div class="inline-block">
-                    <label class="ml-3">Data Prevista Entrega</label>
-                    <input class="m-4" type="date">
+                    <label class="ml-3">Data Prevista Entrega<span class="text-indigo-600">*</span></label>
+                    <input class="m-4" type="date" required>
                 </div>
 <br>
                 <div class="inline-block">
