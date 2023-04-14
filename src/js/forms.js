@@ -44,3 +44,14 @@ const input = document.getElementById("telefone");
         
             init();
         })();
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            var fileInput = event.target;
+            var allowedExtensions = ['.pdf', '.docx', '.png', '.jpeg', '.docx'];
+            var fileName = fileInput.value;
+            var fileExtension = fileName.substring(fileName.lastIndexOf('.')).toLowerCase();
+            if (allowedExtensions.indexOf(fileExtension) === -1) {
+              alert('Por favor, selecione um arquivo com uma das seguintes extensões: ' + allowedExtensions.join(', '));
+              fileInput.value = '';
+            }
+          });
